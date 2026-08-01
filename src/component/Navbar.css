@@ -1,0 +1,40 @@
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    z-index: 999999;
+    justify-content: center;
+}
+
+.nav .box{
+    display: flex;
+    
+    border: 1px solid #444;
+    width: 50%;
+    align-items: center;
+    background: #000;
+    justify-content: space-between;
+    border-radius: 500px;
+    padding: 10px 10px;
+
+}
+
+.nav .links {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.nav .logo {
+    width: 70px;
+    height: 40px;
+    background: #dadada;
+    border-radius: 500px;
+}
+
+.nav Button{
+    background-color: #fff;
+}

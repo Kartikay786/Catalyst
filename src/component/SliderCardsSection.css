@@ -1,0 +1,25 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-track {
+  display: flex;
+  /* gap: px; */
+  width: max-content;
+  animation: scrollLeft 15s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}

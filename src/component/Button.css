@@ -1,0 +1,24 @@
+.button button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    padding: 14px 22px;
+    border-radius: 500px;
+    /* height: 40px; */
+    overflow: hidden;
+    font-weight: normal;
+    color: #111;
+    line-height: 26px;
+    /* background: #9AFD0D */
+}
+.button{
+    display: inline-block;
+}
+.button h3{
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    overflow: hidden;
+}

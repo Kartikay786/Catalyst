@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Poppin";
+  src: url('./assets/Poppins-Regular.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home {
+  height: 600vw;
+}
+body {
+  background: #111;
+  overflow-x: hidden;
+  color: #fff;
+  font-family:"Poppin"
+}
+
+
