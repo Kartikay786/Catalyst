@@ -8,6 +8,7 @@
 }
 .port h1{
     font-size: 50px;
+    margin-bottom: 30px;
 }
 .port .cats{
     display: flex;
@@ -30,4 +31,53 @@
 }
 ::-webkit-scrollbar{
     display: none;
+}
+
+
+.port .cards {
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.port .cards img {
+    border-radius: 15px;
+    width: 100%;
+}
+.port .cards .left {
+    width: 48%;
+    overflow: hidden;
+    
+}
+.port .cards .left img{
+    object-fit: cover;
+}
+.port .cards .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;overflow: hidden;
+    height: 100%;
+    flex-direction: column;
+}
+
+.port .cards .right .top{
+    height: 48%;
+    overflow: hidden;
+
+}
+
+.port .cards .right .bottom {
+    height: 48%;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.port .cards .right .bottom .br,
+.port .cards .right .bottom .bl{
+    width: 48%;
+    overflow: hidden;
 }
