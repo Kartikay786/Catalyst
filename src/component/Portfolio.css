@@ -1,0 +1,33 @@
+.port{ 
+    margin-top: 10vw;
+    padding: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.port h1{
+    font-size: 50px;
+}
+.port .cats{
+    display: flex;
+    width: 100%;
+    gap: 50px;    
+    overflow-x: scroll;
+    margin-top: 40px;
+    margin-bottom: 30px ;
+}
+.port .cats .cat {
+    padding: 20px;
+    border-radius: 500px;
+    border: 1px solid #dadada;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.port .cats .cat:hover {
+    background: rgb(80, 229, 0);
+}
+::-webkit-scrollbar{
+    display: none;
+}

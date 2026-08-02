@@ -10,45 +10,48 @@ import './Video.css'
 gsap.registerPlugin(ScrollTrigger);
 export default function Video() {
 
-    const videoRef = useRef()
+  const videoRef = useRef()
 
-   useGSAP(() => {
-  // Scale up while scrolling
-  gsap.fromTo(
-    videoRef.current,
-    {
-      scale: 0.7,
-    },
-    {
-      scale: 1,
+  useGSAP(() => {
+    // 1. Scale up
+    gsap.fromTo(
+      videoRef.current,
+      {
+        scale: 0.7,
+      },
+      {
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: videoRef.current,
+          start: "top 80%",
+          end: "top center",
+          scrub: true,
+        },
+      }
+    );
+
+    // 2. Pin for 100vh
+    ScrollTrigger.create({
+      trigger: videoRef.current,
+      start: "top top",
+      end: "+=100%",
+      pin: true,
+      pinSpacing: true,
+    });
+
+    // 3. Scale down while pinned
+    gsap.to(videoRef.current, {
+      scale: 0.3,
       ease: "none",
       scrollTrigger: {
         trigger: videoRef.current,
-        start: "top 70%",
-        end: "center center",
+        start: "top top",
+        end: "+=100%",
         scrub: true,
       },
-    }
-  );
-
-  // Pin the video for 100vh worth of scrolling
-  ScrollTrigger.create({
-    trigger: videoRef.current,
-    start: "center center",
-    end: "+=100%",
-    pin: true,
-    pinSpacing: true,
+    });
   });
-
-  gsap.to(videoRef.current, {
-    scale : 0.3 ,
-    scrollTrigger : {
-        trigger : videoRef.current,
-        markers : true,
-        scrub : 1
-    }
-  })
-});
 
 
   return (
